@@ -10,16 +10,16 @@
   ],
   "name": "Shortcuts",
   "shortcuts":[
-    {"name":"One","url":"shortcuts.html#one","icons":[{"src":"/web_app_shortcuts/green-256.png","type":"image/png","sizes":"256x256"},
-                                                      {"src":"/web_app_shortcuts/black-32.png","type":"image/png","sizes":"32x32","purpose":"monochrome"}]},
-    {"name":"Two","url":"shortcuts.html#two","icons":[{"src":"/web_app_shortcuts/blue-32.png","type":"image/png","sizes":"32x32","purpose":"maskable"},
-                                                      {"src":"/web_app_shortcuts/dkgray-96.png","type":"image/png","sizes":"96x96","purpose":"any monochrome"}]},
-    {"name":"Three","url":"shortcuts.html#three","icons":[{"src":"/web_app_shortcuts/yellow-48.png","type":"image/png","sizes":"48x48","purpose":"any"},
-                                                          {"src":"/web_app_shortcuts/ltgray-128.png","type":"image/png","sizes":"128x128","purpose":"monochrome"}]},
-    {"name":"Four","url":"shortcuts.html#four","icons":[{"src":"/web_app_shortcuts/cyan-96.png","type":"image/png","sizes":"96x96","purpose":"any maskable"},
-                                                        {"src":"/web_app_shortcuts/white-192.png","type":"image/png","sizes":"192x192","purpose":"monochrome"}]},
-    {"name":"Five","url":"shortcuts.html#five","icons":[{"src":"/web_app_shortcuts/magenta-128.png","type":"image/png","sizes":"128x128","purpose":"maskable"},
-                                                        {"src":"/web_app_shortcuts/gray-48.png","type":"image/png","sizes":"48x48","purpose":"monochrome"}]}
+    {"name":"One","url":"shortcuts.html#one","icons":[{"src":"/super-concrete-tarsal/web_app_shortcuts/green-256.png","type":"image/png","sizes":"256x256"},
+                                                      {"src":"/super-concrete-tarsal/web_app_shortcuts/black-32.png","type":"image/png","sizes":"32x32","purpose":"monochrome"}]},
+    {"name":"Two","url":"shortcuts.html#two","icons":[{"src":"/super-concrete-tarsal/web_app_shortcuts/blue-32.png","type":"image/png","sizes":"32x32","purpose":"maskable"},
+                                                      {"src":"/super-concrete-tarsal/web_app_shortcuts/dkgray-96.png","type":"image/png","sizes":"96x96","purpose":"any monochrome"}]},
+    {"name":"Three","url":"shortcuts.html#three","icons":[{"src":"/super-concrete-tarsal/web_app_shortcuts/yellow-48.png","type":"image/png","sizes":"48x48","purpose":"any"},
+                                                          {"src":"/super-concrete-tarsal/web_app_shortcuts/ltgray-128.png","type":"image/png","sizes":"128x128","purpose":"monochrome"}]},
+    {"name":"Four","url":"shortcuts.html#four","icons":[{"src":"/super-concrete-tarsal/web_app_shortcuts/cyan-96.png","type":"image/png","sizes":"96x96","purpose":"any maskable"},
+                                                        {"src":"/super-concrete-tarsal/web_app_shortcuts/white-192.png","type":"image/png","sizes":"192x192","purpose":"monochrome"}]},
+    {"name":"Five","url":"shortcuts.html#five","icons":[{"src":"/super-concrete-tarsal/web_app_shortcuts/magenta-128.png","type":"image/png","sizes":"128x128","purpose":"maskable"},
+                                                        {"src":"/super-concrete-tarsal/web_app_shortcuts/gray-48.png","type":"image/png","sizes":"48x48","purpose":"monochrome"}]}
   ],
   "start_url": "shortcuts.html"
 }
