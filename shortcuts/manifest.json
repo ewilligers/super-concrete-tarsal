@@ -10,10 +10,10 @@
 
   "shortcuts":[
     {"name":"One","url":"one.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs1.png","type":"image/png","sizes":"192x192"}]},
-    {"name":"Two","url":"two.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs2.png","type":"image/png","sizes":"192x192"}]},
-    {"name":"Three","url":"three.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs3.png","type":"image/png","sizes":"192x192"}]},
-    {"name":"Four","url":"four.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs4.png","type":"image/png","sizes":"192x192"}]},
-    {"name":"Five","url":"five.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs5.png","type":"image/png","sizes":"192x192"}]}
+    {"name":"Two","url":"two.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs2.png","type":"image/png","sizes":"192x192","purpose":"maskable"}]},
+    {"name":"Three","url":"three.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs3.png","type":"image/png","sizes":"192x192","purpose":"any"}]},
+    {"name":"Four","url":"four.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs4.png","type":"image/png","sizes":"192x192","purpose":"any maskable"}]},
+    {"name":"Five","url":"five.html","icons":[{"src":"https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs5.png","type":"image/png","sizes":"192x192","purpose":"maskable"}]}
   ],
 
   "start_url": "index.html",
