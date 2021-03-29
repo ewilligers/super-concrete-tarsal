@@ -9,7 +9,7 @@
   <script>
     window.onload = () => {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register("/super-concrete-tarsal/web_app_shortcuts/service_worker.js");
+        navigator.serviceWorker.register("service_worker.js");
       }
       if (window.location.hash.length > 0) {
         const selected = document.getElementById(window.location.hash.substring(1));
