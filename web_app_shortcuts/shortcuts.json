@@ -31,5 +31,43 @@
       {"src":"gray-48.png","type":"image/png","sizes":"48x48","purpose":"monochrome"}
     ]}
   ],
-  "start_url": "shortcuts.html"
+  "start_url": "shortcuts.html",
+  "file_handlers": [
+    {
+      "action": "open-csv",
+      "name": "Comma-separated Value",
+      "accept": {
+        "text/csv": [ ".csv" ]
+      },
+      "icons": [
+        {
+          "src": "magenta-128.png",
+          "sizes": "144x144"
+        }
+      ]
+    },
+    {
+      "action": "open-svg",
+      "name": "Image",
+      "accept": {
+        "image/svg+xml": ".svg"
+      },
+      "icons": [
+        {
+          "src": "cyan-96.png",
+          "sizes": "144x144"
+        }
+      ]
+    },
+    {
+      "action": "open-graf",
+      "name": "Grafr",
+      "accept": {
+        "application/vnd.grafr.graph": [
+          ".grafr", ".graf"
+        ],
+        "application/vnd.alternative-graph-app.graph": ".graph"
+      }
+    }
+  ]
 }
