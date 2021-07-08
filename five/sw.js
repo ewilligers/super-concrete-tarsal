@@ -34,7 +34,7 @@ function respondToShare(event) {
 
     let body = page.replace('{{received_text}}', escapeQuotes(receivedText));
 
-    const file_fields = ['attached_text', 'attached_image'];
+    const file_fields = ['attached_text', 'attached_image', 'attached_video'];
 
     let field_index = 0;
 
@@ -71,6 +71,8 @@ function respondToShare(event) {
       }
       if (file_fields[field_index] === 'attached_image') {
         file_contents += '<img src="data:' + files[index].type + ';base64,' + btoa(dataFromFileLoaded) + '">';
+      } else if (file_fields[field_index] === 'attached_video') {
+        file_contents += '<video src="data:' + files[index].type + ';base64,' + btoa(dataFromFileLoaded) + '">';
       } else {
         file_contents += escapeQuotes(dataFromFileLoaded);
       }

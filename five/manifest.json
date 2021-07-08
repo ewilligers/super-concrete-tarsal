@@ -36,6 +36,19 @@
             ".xbm",
             "image/*"
           ]
+        },
+        {
+          "name": "attached_video",
+          "accept": [
+            ".m4v",
+            ".mp4",
+            ".mpeg",
+            ".mpg",
+            ".ogm",
+            ".ogv",
+            ".webm",
+            "video/*"
+          ]
         }
       ]
     }
