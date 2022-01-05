@@ -9,6 +9,8 @@
   ],
   "start_url": "index.html",
   "display": "minimal-ui",
+  "background_color": "khaki",
+  "theme_color": "salmon",
   "share_target": {
     "action": "share-target-destination.html",
     "method": "POST",
