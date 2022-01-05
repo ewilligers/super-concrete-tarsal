@@ -94,13 +94,7 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  event.respondWith((async () => {
-    try {
-      return await fetch(event.request);
-    } catch (error) {
-      return new Response('Offline');
-    }
-  })());
+  event.respondWith(fetch(event.request));
 });
 
 })();
