@@ -1,0 +1,31 @@
+{
+  "name": "share Seven",
+  "icons": [
+    {
+      "src": "https://cdn.glitch.global/1827f5fb-ebc3-4cc9-bac2-7d675be9aec5/darkslategray-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "minimal-ui",
+  "share_target": {
+    "action": "share-target-destination.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "received_title",
+      "text": "received_text",
+      "url": "received_url",
+      "files": [
+        {
+          "name": "attached_image",
+          "accept": [
+            ".ico",
+            "image/x-icon"
+          ]
+        }
+      ]
+    }
+  }
+}

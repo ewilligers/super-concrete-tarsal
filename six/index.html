@@ -4,30 +4,21 @@
   <meta charset="utf-8">
   <link rel="manifest" href="manifest.json">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs5.png?v=1611282338971">
-  <title>share Five</title>
+  <link rel="icon" type="image/png" href="https://cdn.glitch.global/d935d262-1e3c-4815-b4e4-0a63189e271f/sienna-144.png">
+  <title>share Six</title>
   <script>
     'use strict';
     function create_file(prefix, extension, content_type, content) {
-      const name = '../' + prefix + extension;
+      const name = prefix + extension;
       const options = {type: content_type};
       return new File([content], name, options);
     }
 
     async function createShareData() {
-      const flags = 5;
-      let files = [];
-      let shareData = { files: files };
-      if (flags & 1) {
-        shareData.text = 'Message';
-      }
-      if (flags & 2) {
-        files.push(create_file('readme', '.txt', 'text/plain', 'Attachment'));
-      }
-      if (flags & 4) {
-        const content = '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96"><rect width="96" height="96" fill="indigo"/></svg>';
-        files.push(create_file('square', '.svg', 'image/svg+xml', content));
-      }
+      let shareData = { };
+      shareData.title = 'Headline';
+      shareData.text = 'Content';
+      shareData.url = 'https://example.com/';
       return shareData;
     }
 
@@ -50,6 +41,6 @@
   </script>
 </head>
 <body>
-  <button id="share">share Five</button>
+  <button id="share">share Six</button>
 </body>
 </html>

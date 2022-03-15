@@ -9,7 +9,7 @@
   <script>
     'use strict';
     function create_file(prefix, extension, content_type, content) {
-      const name = prefix + extension;
+      const name = '/' + prefix + extension;
       const options = {type: content_type};
       return new File([content], name, options);
     }
