@@ -18,15 +18,27 @@ function respondToShare(event) {
   event.respondWith((async () => {
     const response = await fetch('share-target-destination.template.html');
     const page = await response.text();
+
     let formData;
-    try {
-      formData = await event.request.formData();
-    } catch (error) {
-      formData = new FormData();
+    if (event.request.method === 'GET') {
+      formData = new URL(event.request.url).searchParams;
+    } else {
+      try {
+        formData = await event.request.formData();
+      } catch (error) {
+        formData = new FormData();
+      }
     }
     const receivedTitle = formData.get('received_title') || '';
-    const receivedText = formData.get('received_text') || '';
+    let receivedText = formData.get('received_text') || '';
     const receivedUrl = formData.get('received_url') || '';
+
+    if (receivedTitle.startsWith('share ')) {
+      let n = receivedText.length;
+      if (receivedText == 'x'.repeat(n)) {
+        receivedText = '[share ' + n + ']';
+      }
+    }
 
     const init = {
       status: 200,
@@ -38,6 +50,10 @@ function respondToShare(event) {
                     replace('{{received_title}}', escapeQuotes(receivedTitle)).
                     replace('{{received_text}}', escapeQuotes(receivedText)).
                     replace('{{received_url}}', escapeQuotes(receivedUrl)));
+
+    if (event.request.method === 'GET') {
+      return new Response(body, init);
+    }
 
     const file_fields = ['attached_text', 'attached_image'];
 
@@ -93,8 +109,7 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   const pathname = (new URL(event.request.url)).pathname;
-  if (event.request.method === 'POST' &&
-      pathname.endsWith('/share-target-destination.html')) {
+  if (pathname.endsWith('/share-target-destination.html')) {
     respondToShare(event);
     return;
   }

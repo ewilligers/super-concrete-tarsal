@@ -22,6 +22,13 @@
       return shareData;
     }
 
+    async function createCustomShareData(n) {
+      let shareData = { };
+      shareData.title = 'share ' + n;
+      shareData.text = 'x'.repeat(n);
+      return shareData;
+    }
+
     window.onload = () => {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register("sw.js");
@@ -35,12 +42,37 @@
         return;
       }
 
+      if (!('share' in navigator)) {
+        share.style.display = 'none';
+        return;
+      }
+
       share.onclick = async () =>
           navigator.share(await createShareData()).catch(() => {});
+
+
+
+      const extras = document.getElementById('extras');
+      for (let i = 1; i <= 20; ++i) {
+        const n = 1000 * i;
+        const button = document.createElement('button');
+        button.textContent = 'share ' + n;
+
+      button.onclick = async () =>
+          navigator.share(await createCustomShareData(n)).catch(() => {});
+
+        const div = document.createElement('div');
+        div.appendChild(button);
+        extras.appendChild(div);
+      }
     }
   </script>
 </head>
 <body>
-  <button id="share">share Six</button>
+  <div>
+    <button id="share">share Six</button>
+  </div>
+  <section id="extras">
+  </section>
 </body>
 </html>
