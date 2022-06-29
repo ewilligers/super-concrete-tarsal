@@ -1,0 +1,57 @@
+{
+  "name": "share AAJ",
+  "short_name": "AAJ",
+  "icons": [
+    {
+      "src": "https://cdn.glitch.com/9bdcb1a9-d93f-4d1a-9d46-be446fbc251f%2Fs5.png?v=1611282338971",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "minimal-ui",
+  "share_target": {
+    "action": "share-target-destination.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "text": "received_text",
+      "files": [
+        {
+          "name": "attached_image",
+          "accept": [
+            ".bmp",
+            ".gif",
+            ".ico",
+            ".jfif",
+            ".jpeg",
+            ".jpg",
+            ".pjp",
+            ".pjpeg",
+            ".png",
+            ".svg",
+            ".svgz",
+            ".tif",
+            ".tiff",
+            ".webp",
+            ".xbm",
+            "image/*"
+          ]
+        },
+        {
+          "name": "attached_video",
+          "accept": [
+            ".m4v",
+            ".mp4",
+            ".mpeg",
+            ".mpg",
+            ".ogm",
+            ".ogv",
+            ".webm",
+            "video/*"
+          ]
+        }
+      ]
+    }
+  }
+}
